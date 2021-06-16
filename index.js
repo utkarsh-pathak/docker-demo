@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Is it really working. I am really SHOCKED!!');
+  res.send('IS CI/CD working!');
 });
 
 var server = app.listen(3000, function () {
