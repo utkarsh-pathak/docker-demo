@@ -1,13 +1,19 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+
+const placeHolder = 'CI/CD is amazing.';
+const htmlString = `
+  <h1>${placeHolder}</h1>
+  <h2>Just Another Demo</h2>
+`
 
 app.get('/', function (req, res) {
-  res.send('CI/CD is amazing');
+  res.send(htmlString);
 });
 
-var server = app.listen(3000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
+const server = app.listen(3000, function () {
+  const host = server.address().address;
+  const port = server.address().port;
 
   console.log('Example app listening at http://%s:%s', host, port);
 });
